@@ -11,5 +11,45 @@ CSS
 1. color - change text color
     - color name
     -rgb
+    rgb(red,green,blue)
+    range for each color : 0 to 255
+  3*  0 - no color : black 
+   3*  255 - white color
+
+    rgb(255,0,0)
     -hex
+    #rrggbb
+    rr - red
+    gg - green
+    bb - blue
+    00 - ff
+    0 - 9
+    a - f
+    #000000 - black 
+    #ffffff - white 
+
+    *aaa
+    3 digit hex 
+    #rgb 
+
+
     -hsl
+    h - hue 
+    s - saturation
+    l - lightness
+    0 - 360
+
+    hue: 
+    0 - 119 -red
+    120 - 239 - green 
+    240 - 360 - blue 
+
+    saturation:
+    0% - 100%
+    0% - gray shade
+    100% - full color
+
+    lightness :
+    0% - black 
+    50% - mid range color 
+    100% - white 
