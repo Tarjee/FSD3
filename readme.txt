@@ -53,3 +53,19 @@ CSS
     0% - black 
     50% - mid range color 
     100% - white 
+
+
+
+2. background-color : 
+
+ opacity : 0.0 - 1.0
+ rgba();
+ rgb 
+ rgba 
+ 0 - 255 - red -r
+ 0 - 255 - green -g
+ 0 - 255 - blue -b
+ 0.0 - 1.0 - alpha -a 
+ a - alpha - 0.0 - 1.0
+
+ background -image :

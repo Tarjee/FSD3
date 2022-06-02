@@ -3,11 +3,42 @@
   <head>
     <title>CSS</title>
   </head>
-  <body>
+  <!-- <body style= "background-image:url('https://placekitten.com/200/300')">
+      repeat , repeat-x , repeat-y , no-repeat
+-->
+  <body
+    style="
+      background-image: url('https://placekitten.com/200/300');
+      background-repeat: no-repeat;
+      background-position: right top;
+    "
+  >
     <p style="color: red">Text</p>
     <h1 style="color: blue">Heading</h1>
     <h2 style="color: rgb(186, 21, 65)">This is rgb color</h2>
     <h2 style="color: #6a5aff">This is hex</h2>
     <h3 style="color: hsl(0, 100%, 50%)">This is hsl</h3>
+
+    <p style="background-color: rgb(0, 279, 255); color: royalblue">
+      This is background color
+    </p>
+    <div style="background-color: green; opacity: 0.1">Opacity 0.1</div>
+    <div style="background-color: green; opacity: 0.3">Opacity 0.3</div>
+    <div style="background-color: green; opacity: 0.6">Opacity 0.6</div>
+    <div style="background-color: green; opacity: 1">Opacity 1 (default)</div>
+    <h3>Opacity with rgba</h3>
+    <div style="background-color: rgba(0, 120, 0, 0.1)">Opacity 0.1</div>
+    <div style="background-color: rgba(0, 120, 0, 0.3)">Opacity 0.3</div>
+    <div style="background-color: rgba(0, 120, 0, 0.6)">Opacity 0.6</div>
+    <div style="background-color: rgba(0, 120, 0, 1)">Opacity 1 (default)</div>
+    <h3>Image background</h3>
+    <div
+      style="
+        background-image: url('https://placekitten.com/200/300');
+        height: 200px;
+      "
+    >
+      This is image div
+    </div>
   </body>
 </html>
