@@ -68,4 +68,61 @@ CSS
  0.0 - 1.0 - alpha -a 
  a - alpha - 0.0 - 1.0
 
- background -image :
+ background -image : url()
+
+ background :
+
+
+ 3. border:
+ 
+ 
+  border-style : border-top-style border-right-style border-bottom-style border-left-style
+   - dashed
+   - solid
+   - double
+   - groove
+   - inset 
+   - outset
+   - dotted
+   - ridge 
+   - none 
+   - hidden
+  
+border-width :
+
+border-top-width
+border-right-width
+border-bottom-width
+border-left-width
+   - thin
+   - medium
+   - thick
+
+
+   border-color
+   border-top-color
+   border-right-color
+   border-bottom-color
+   border-left-color
+
+
+shorthand :
+ border :
+  border-width 
+  border-style(required) 
+  border-color
+
+ border-radius : rounder corners
+
+
+ margins:
+  margin-top
+  margin-right
+  margin-bottom
+  margin-left
+
+  shorthand :
+   margin : margin-top margin-right margin-bottom margin-left
+
+
+5. padding: space inside elements
