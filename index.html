@@ -2,30 +2,261 @@
 <html>
   <head>
     <title>CSS</title>
+    <style>
+      
+      p {
+        
+        color: #6a5aff;
+        background-color: aliceblue;
+      }
+
+      h1 {
+        background-color: whitesmoke;
+      }
+      /* h2{
+        color:blue;
+        background-color : green;
+      }
+      
+      */
+      .Heading1 {
+        color: red;
+      }
+      .Heading2 {
+        background-color: maroon;
+      }
+      #firstpara {
+        background-color: aquamarine;
+      }
+      .Heading1,
+      .colorblue {
+        color: green;
+      }
+      .colorblue {
+        color: blueviolet;
+      }
+      #Hello {
+        color: black;
+        background-color: blanchedalmond;
+      }
+      #Hello,
+      #deep,
+      #color {
+        color: azure;
+      }
+      #customers {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        /*border: 1px solid black;*/
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #customers td,
+      #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      #customers th {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: left;
+        background-color: rgb(4, 89, 4);
+        color: white;
+      }
+      #customers tr:nth-child(even) {
+        background-color: hsl(0, 14%, 78%);
+      }
+      #customers tr:hover {
+        background-color: #ddd;
+      }
+      /* li{
+        display: inline;
+      } */
+      .firstul li {
+        display: inline;
+      }
+      .firstul a {
+        text-decoration: none;
+      }
+      .parent {
+        background-color: aqua;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        height: 500px;
+      }
+      #child-one {
+        background-color: yellow;
+        padding: 5px;
+        position: sticky;
+        top: 10px;
+        left: 0px;
+      }
+      #child-two {
+        background-color: tomato;
+
+        padding: 5px;
+      }
+      #child-three {
+        background-color: green;
+
+        padding: 5px;
+      }
+      .center-div {
+        background-color: #6a5aff;
+        width: 30rem; /* 1 rem - 16px */
+        max-width: 95%;
+        text-align: center;
+        margin: 2rem auto;
+      }
+      .center-div:hover {
+        background-color: gray;
+      }
+      /* div p {
+        background-color: yellow;
+      } */
+      /* div > p {
+        background-color: yellow;
+      } */
+      /* div + p {
+        background-color: yellow;
+      } */
+      div ~ p {
+        background-color: yellow;
+      }
+
+      .mouseOver {
+        background-color: green;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .mouseOver:hover {
+        background-color: #6a5aff;
+      }
+      p {
+        display: none;
+        background-color: yellow;
+        padding: 20px;
+      }
+      .hintcss:hover p {
+        display: block;
+      }
+    </style>
   </head>
   <!-- <body style= "background-image:url('https://placekitten.com/200/300')">
       repeat , repeat-x , repeat-y , no-repeat
 -->
-  <body
-    style="
-      background-image: url('https://placekitten.com/200/300');
-      background-repeat: no-repeat;
-      background-position: right top;
-    "
-  >
+  <body>
+    
+    <form>
+      <label for="email"style="display: block ">Email</label>
+      <input type="email" name="email" id="email" />
+    </form>
+    
+    <p>This is 1st para</p>
+    <p>This is 2nd para</p>
+    <div>
+      <p>This is 1st para</p>
+      <p>This is 2nd para</p>
+    
+    <br> <br>
+    </div>
+    <a
+      href="https://zoom.us/j/91557713375?pwd=TVcrT0ZQUTc0K3YyYWVGTlZXSnNvdz09"
+      target="_blank"
+    >
+      Zoom
+    </a>
+    <div class="hintcss">
+      mouse over to see the hint
+      <p>this is good</p>
+    </div>
+    <div class="mouseOver">Mouse over css</div>
+
+    <div>
+      <p>This is first pera in div</p>
+      <p>This is second pera in div</p>
+      <section><p>this is pera within section</p></section>
+    </div>
+    <p>this is pera after div.</p>
+    <code>this is text</code>
+    <p>this is pera after div.</p>
+
+    <div class="center-div">this is centered div</div>
+    <div class="parent">
+      parent
+      <div id="child-one">child one</div>
+      <div id="child-two">child two</div>
+      <div id="child-three">child three</div>
+    </div>
+    
+    
+    
+
+    <ul class="firstul">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+      <li><a href="#">Node</a></li>
+    </ul>
+<!-- <a href="#">First</a>
+<a href="#">Second</a>
+<h3>This is heading</h3>
+<a href="#">Hello</a> -->
+    <table id="customers">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Contract</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jess</td>
+          <td>Maria</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Faiza</td>
+          <td>Tasmin</td>
+          <td>Bangladesh</td>
+        </tr>
+      </tbody>
+        
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jess</td>
+          <td>Maria</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Faiza</td>
+          <td>Tasmin</td>
+          <td>Bangladesh</td>
+        </tr>
+      </tbody>
+    </table>
+    
+
     <p style="color: red">Text</p>
     <h1 style="color: blue">Heading</h1>
-    <h2 style="color: rgb(186, 21, 65)">This is rgb color</h2>
-    <h2 style="color: #6a5aff">This is hex</h2>
-    <h3 style="color: hsl(0, 100%, 50%)">This is hsl</h3>
+    <h2 class="Heading1">This is rgb color</h2>
+    <h2 class="Heading2 colorblue">This is hex</h2>
+    <h3 class="Heading2 colorgreen">This is hsl</h3>
+    <h3 class="Heading1">3 digits</h3>
+    <h4 class="Heading2">Hello world</h4>
+    <h2 id="Hello color">This is live session</h2>
+    <h3 id="Hello">This is CSS id property</h3>
+    <h3 id="Hello">48990</h3>
+    <h4 id="Hello">Hellooo</h4>
 
-    <p style="background-color: rgb(0, 279, 255); color: royalblue">
-      This is background color
-    </p>
-    <div style="background-color: green; opacity: 0.1">Opacity 0.1</div>
-    <div style="background-color: green; opacity: 0.3">Opacity 0.3</div>
-    <div style="background-color: green; opacity: 0.6">Opacity 0.6</div>
-    <div style="background-color: green; opacity: 1">Opacity 1 (default)</div>
+    <p id="firstpara">This is background color</p>
+    <div id="firstpara" style="opacity: 0.1">Opacity 0.1</div>
+    <div id="firstpara" style="opacity: 0.3">Opacity 0.3</div>
+    <div id="firstpara" style="opacity: 0.6">Opacity 0.6</div>
+    <div id="firstpara" style="opacity: 1">Opacity 1 (default)</div>
     <h3>Opacity with rgba</h3>
     <div style="background-color: rgba(0, 120, 0, 0.1)">Opacity 0.1</div>
     <div style="background-color: rgba(0, 120, 0, 0.3)">Opacity 0.3</div>
@@ -55,14 +286,11 @@
     <div
       style="
         background-color: lightblue;
-
         border: 1px solid black;
         margin-top: 100px;
         margin-bottom: 150px;
         margin-left: 150px;
-        margin-right: 100px;
-      "
-    >
+        margin-right: 100px">
       This is margin
     </div>
     <div
@@ -72,10 +300,141 @@
     </div>
     <div style="border: 1px solid black; padding: 100px">Padding</div>
     <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <div
+      style="
+        border: 1px solid black;
+        width: 1000px;
+        height: 200px;
+        max-width: 500px;
+        min-width: 10%;
+        max-height: 90%;
+        min-height: 20px;
+        text-align: right;
+      "
+    >
+      this is div for height and width
+    </div>
+    <h1 style="text-align: center">Heading1(center)</h1>
+    <h1 style="text-align: left; padding-left: 100px">Heading2(left)</h1>
+    <h1 style="text-align: right">Heading3(right)</h1>
+    <div
+      style="
+        border: 1px solid black;
+        padding: 10px;
+        height: 200px;
+        width: 200px;
+        text-align: justify;
+        overflow: auto;
+        float: right;
+      "
+    >
+      Lorem ipsum dolor <span style="color:blue ;">sit amet</span> consectetur adipisicing elit. Aliquam cumque
+      atque eos ipsam cum. Recusandae soluta assumenda possimus, magni rerum
+      obcaecati optio, vero ipsam fugiat nobis, voluptatum sed rem a?Recusandae
+      soluta assumenda possimus, magni rerum obcaecati optio, vero ipsam fugiat
+      nobis, voluptatum sed rem a?Recusandae soluta assumenda possimus, magni
+      rerum obcaecati optio, vero ipsam fugiat nobis, voluptatum sed rem a?
+    </div>
+    <h1
+      style="
+        text-decoration-line: overline;
+        text-decoration-color: green;
+        text-decoration-style: wavy;
+        text-decoration-thickness: 25%;
+      "
+    >
+      Overline
+    </h1>
+    <h1
+      style="
+        text-decoration-line: underline;
+        text-decoration-color: red;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 25%;
+      "
+    >
+      Underline
+    </h1>
+    <h1
+      style="
+        text-decoration-line: line-through;
+        text-decoration-color: blue;
+        text-decoration-style: double;
+        text-decoration-thickness: 10%;
+      "
+    >
+      line trough
+    </h1>
+    <h1
+      style="
+        text-decoration-line: overline underline;
+        text-decoration-color: green;
+        text-decoration-style: solid;
+        text-decoration-thickness: 20%;
+      "
+    >
+      combination
+    </h1>
+
+    <h1 style="text-decoration: underline red double 5px">This is shorthand</h1>
+    <a href="# " style="text-decoration: none">This is anchor</a>
+    <p style="text-transform: uppercase">This is uppercase</p>
+    <p style="text-transform: lowercase">this is LOWERCASE</p>
+    <p style="text-transform: capitalize">this is capitalized</p>
+    <p style="text-indent: 50px">
+      Lorem ipsum dolor sit
+      <span style="text-decoration: underline">amet</span> consectetur
+      adipisicing elit. Adipisci doloremque consequatur molestiae perferendis!
+      Mollitia quos iusto, temporibus iure voluptate repellat blanditiis modi
+      molestiae dolor velit deserunt, voluptatum at quibusdam molestias fugiat
+      culpa nulla quidem, nemo in? Hic quasi id dolore.
+    </p>
+    <h1 style="letter-spacing: 5px">This is positive space</h1>
+    <h1 style="letter-spacing: -5px">This is negative space</h1>
+    <!--
+  100% - 1
+  80% - 0.8
+  170% - 1.7
+-->
+    <p
+      style="
+        line-height: 1.7;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+      "
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, natus
+      recusandae! Officia quas doloremque natus aspernatur voluptas architecto
+      ad neque, suscipit nostrum dolore, nihil eos, repellat saepe tempora?
+      Eius, magni!
+    </p>
+    <p
+      style="
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 10px;
+      "
+    >
+      Font family paragraph.Just adding some text.
+    </p>
+    <p
+      style="
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: oblique;
+        font-size: 30px;
+      "
+    >
+      This is another para for font
+    </p>
+    <h1 style="font-size: 30px">This is font size Heading</h1>
+    <p style="font: 20px Arial, sans-serif">Font shorthand</p>
+    <div
+      style="height: 100px; width: 100px; background: green; border-radius: 50%"
+    ></div>
+
+    <br /><br /><br /><br /><br />
+
+   
   </body>
 </html>
-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
