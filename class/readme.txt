@@ -317,9 +317,8 @@ flex-flow: column wrap
 
   css animations: start - end 
 
-git remote set-url origin https://github.com/Tarjee/FSD3.git
-https://github.com/Tarjee/FSD3.git
 
 
-
+object-fit - for picture
+linear-gradient- 
   

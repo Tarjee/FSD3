@@ -34,3 +34,16 @@ div {
 div ~ p {
   margin: 0px auto;
 }
+.rating1,
+.rating2 {
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+}
+.rating1 > label {
+  color: blue;
+  transition: 0.2s ease;
+}
+.rating1 label:hover {
+  color: hotpink;
+}
