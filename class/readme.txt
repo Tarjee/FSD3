@@ -317,8 +317,8 @@ flex-flow: column wrap
 
   css animations: start - end 
 
-git remote add origin https://github.com/Tarjee/FSD3.git
-
+git remote set-url origin https://github.com/Tarjee/FSD3.git
+https://github.com/Tarjee/FSD3.git
 
 
 
