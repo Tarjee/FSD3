@@ -320,5 +320,5 @@ flex-flow: column wrap
 
 
 object-fit - for picture
-linear-gradient- 
+linear-gradient- for background color
   

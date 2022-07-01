@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS</title>
+  </head>
+  <body>
+    <script>
+      //for loop
+      //10 records , 5 other record
+
+      for (let index = 0; index < 10; index++) {
+        console.log("this isw index value:", index);
+        for (let k = 0; k < 5; k++) {
+          console.log("this is k::", k);
+        }
+      }
+      //objects
+      let names = ["Faiza", "Tasmin", 20];
+
+      let person = {
+        firstName: "Faiza Tasmin",
+        age: 27,
+        color: "green",
+        1: "new data",
+        name: "abc",
+        trending: "This is trending",
+      };
+      person.address = "this is my address"; //add new property
+      person[3] = "hello everyone";
+      person.color = "red"; //update any property
+      delete person.name; // delete any property
+
+      // console.log(person);
+      //hasOwnProperty()
+      let present = {
+        gifts: "abc",
+        papers: "pqr",
+        parcels: "xyz",
+      };
+
+      function checkProperty(property) {
+        return present.hasOwnProperty(property);
+      }
+      // console.log(checkProperty("stone"));
+
+      //dot notation
+      // console.log(person);
+      // console.log(person.color);
+      // console.log(person["firstName"]);
+      // console.log(person[1]);
+
+      //sort by : name,trending
+      // if we don't have no idea about variable key name we do like this
+      // let keyname = "trending";
+      // console.log(person[keyname]);
+
+      // let abc = "";
+      // let num = 3;
+      // if (num == 1) {
+      //   console.log(person["trending"]);
+      // } else if (num == 2) {
+      //   console.log(person["firstName"]);
+      // } else if (num == 3) {
+      //   console.log(person["color"]);
+      // }
+
+      //bracket notation
+
+      //switch
+      function checkOutput(value) {
+        //switch case\
+        let answer = "";
+        switch (value) {
+          case 1:
+            answer = "alpha";
+            break;
+
+          case 2:
+            answer = "Beta";
+            break;
+
+          case 3:
+            answer = "Gamma";
+            break;
+          default:
+            answer = "Not valid";
+            break;
+        }
+        return answer;
+      }
+      //console.log(checkOutput(1));
+
+      //if else:
+
+      function checkNumber(number) {
+        // if number is > 100 and less 150
+        //if number is less <10 and greater 0
+        //not a valid number
+        /*
+
+            &&
+
+            true and true and true and true .... = executes/true
+
+
+            OR
+            ||
+              true or true or true = executed
+              true or false or false = executed
+              false or false or false = not executed
+
+
+
+            */
+
+        if (number > 100 && number < 150) {
+          return "Greater 100";
+        } else if (number < 10 || number > 0) {
+          return "less than 10";
+        } else return "Not valid";
+      }
+      //   console.log(checkNumber());
+
+      function trueOrFalse(value) {
+        if (value) {
+          return "Value is true";
+        } else {
+          return "Value is false";
+        }
+      }
+
+      //   console.log(trueOrFalse(true));
+
+      //compare if 12
+      //=== -> if we use 3 equal it will show data is equal or not
+      //    == ->if we use 2 equal that case it won't check data type where its equal as data
+      //    whether data type is string or number it will return true...
+
+      function equalTo12(number) {
+        if (number === 12) return "Value is 12";
+        return "value is not 12";
+      }
+      //console.log(equalTo12("12"));
+
+      //scope : visibility
+
+      let message = "this is first message";
+
+      // function updateData() {
+      //   let userName = "Faiza Tasmin";
+      //   let lastname = "Tarjee";
+      //  // console.log(message);
+      //  // console.log(userName);
+      //  // console.log(lastname);
+      //   return { userName: userName, lastname: lastname };
+      // }
+
+      // let userName = updateData();
+      // let lastname = updateData();
+      // console.log(message);
+      // console.log(userName);
+      // console.log(lastname);
+
+      //   let message = "outside function";
+      //   function printData() {
+      //     message = "Inside function";
+      //     console.log("In: ", message);
+      //   }
+      //   printData();
+      //   console.log("out", message);
+
+      //Functions: combine all things to reuse data.
+      //Functions : DRY
+      //function should have name and then () to pass data but
+      //function won't print any thing if don't declare func name.
+      // We pass parameter in function name and arguments we pass in the calling function
+      // function addNumber(a, b, name) {
+      //   console.log("Add function", a + b, name);
+      // }
+
+      // addNumber(1, 2, "abc");
+      // addNumber(10, 20, "pqr");
+      // addNumber(100, 200, "hcf");
+
+      // function checkArguments() {
+      //   console.log("Hello from function");
+      // }
+
+      // console.log("Global console");
+
+      //checkArguments();
+      //Array
+      //simple array , 1d array
+      let personName = ["Faiza", "Tasmin", "Tarjee", "Fatima", "Sarah"];
+      //Modification - this is called array mutation
+      // console.log(personName);
+      personName[2] = "Changed Name";
+      //push - method to add data which will add at the last/end array
+      // personName.push("Hello");
+
+      //unshift - method to add data at the start
+
+      //personName.unshift("Shital");
+      //pop - remove end
+      // personName.pop();
+
+      //shift - remove start
+      //personName.shift();
+
+      // console.log(personName);
+      //   console.log(personName[0]);
+      //   console.log(personName[1]);
+      //   console.log(personName[2]);
+      //   console.log(personName[3]);
+      //   console.log(personName[4]);
+      //   console.log(personName[5]);
+
+      //nested Array, 2D
+      let personAge = [12, 23, 4, 5, 70];
+      let lastName = ["Mourya", "Faiza", "Fatima", "Sarah", "Jess"];
+      let allPersonData = [
+        ["Tarjee", "Tasmin"],
+        [12, 23, 5, 70],
+        ["Mourya", "Faiza", "Fatima", "Sarah", "Jess"],
+        "Simple text",
+      ];
+
+      //allPersonData.push(["a", "b", "c"]);
+      //console.log(allPersonData);
+      //   console.log(allPersonData[0][1]);
+      //   console.log(allPersonData[1][2]);
+      //   console.log(allPersonData[1]);
+      //   console.log(allPersonData[2]);
+      //   console.log(allPersonData[3]);
+
+      //conditionals if else
+      // booleans : true false
+      // if
+      // let a = 0;
+      // let b = 10;
+      // if (b != 1) {
+      //   console.log("right");
+      // } else {
+      //   console.log("wrong");
+      // }
+
+      //property methods
+      //concat
+      // let str = "First string " + " Second string";
+      // let newStr = "Old string";
+      // newStr += " New string added";
+
+      // let username = "Faiza Tasmin Tarjee";
+      // username[0] = "K"; // we cannot change/modify one string character
+      // console.log(username.length);
+      // console.log(username[0]);
+      // username = "Fatima Khaled";
+      // username = "Sarah Khaled";
+      // let welcome = "Hello " + username + " Welcome to our app..";
+
+      //escape characters
+      let sentence = "First \tline \n'qoutes'\n second line";
+      //console.log(sentence);
+
+      /*
+                        n - new line
+                        t - tab
+                        */
+
+      //2 math operations
+
+      let sum = 10 + 10;
+      //console.log(sum);
+
+      let sub = 10 - 5;
+      // console.log(sub);
+
+      let multipy = 10 * 5;
+      //console.log(multipy);
+
+      let division = 10 / 5;
+      // console.log(division);
+      let mod = 10 % 5;
+      //console.log(mod);
+
+      //compound assignments :
+
+      let newSum = 10;
+      newSum = newSum + 20;
+      newSum += 30;
+      //console.log(newSum);
+
+      let newSub = 10;
+      newSub = newSub - 2;
+      newSub -= 3;
+      // console.log(newSub);
+
+      let newMul = 20;
+      newMul = newMul * 5;
+      newMul *= 3;
+      //console.log(newMul);
+
+      let newDiv = 10;
+      newdiv = newDiv / 2;
+      newDiv /= 5;
+      //console.log(newDiv);
+
+      let increment = 1;
+      increment += 1;
+      increment++;
+      //console.log(increment);
+
+      let decrement = 3;
+      decrement--;
+      //console.log(decrement);
+
+      //console.log("Hello world");
+      //
+      /* */
+      //1.variables
+
+      // var name = "Tarjee";
+      //name = "Tasmin";
+      //   console.log(name);
+      //after using var we would not get any error, we can recreate or modify
+      //after using let we can modify but we would not get to recreate it otherwise we will get error.
+      //try using let as much as i can.
+      let gender = "Female";
+      gender = "Male";
+      //   console.log(gender);
+      const color = "green";
+      //after using const we can not modify or recreate.
+      //console.log(color);
+      //var name = "Fatima";
+      //console.log(name);
+      //   let gender = "Female";
+      //   console.log(gender);
+    </script>
+  </body>
+</html>
