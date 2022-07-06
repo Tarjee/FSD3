@@ -4,43 +4,242 @@
     <title>JS</title>
   </head>
   <body>
+    <!-- document - getting html content + CSS in console
+      DOM- convert webpage/document/visual represent as an object by the browser can be access with DOM -->
+    <h1>This is head</h1>
     <script>
+      //Date
+      //month : 0-11(january start as 0 month)
+      const date = new Date();
+      //January 1, 1970
+      //yy-mm-dd
+      //getFullYear - yyyy
+
+      console.log("Year: ", date.getFullYear());
+      //getMonth() - 0 - 11
+      // January - 0
+      // December - 11
+      // If we want to show teh date to the users we have to use +1 as month start from 0.
+      console.log("Month: ", date.getMonth() + 1);
+      console.log("Month: ", date.toLocaleString("en-Us", { month: "short" }));
+      //getDate() - day 1 - 31
+      console.log("Date: ", date.getDate());
+      //getHours() - 0 - 23
+      console.log("Hours: ", date.getHours());
+
+      //getMinutes() - 0 - 59
+      console.log("Minutes: ", date.getMinutes());
+      //getSeconds() - 0 - 59
+      console.log("Seconds: ", date.getSeconds());
+      //getMilliseconds() - 0 - 999
+      console.log("Milliseconds: ", date.getMilliseconds());
+      //getTime() - milliseconds since January 1 1970
+      console.log("getTime: ", date.getTime());
+      //getDay() - weekday 0 - 6
+      // sunday - 0
+      // saturday - 6
+      // weekday , year , month , day , hours12, hourcycle,timeStyle,calender,timezone
+      console.log("day: ", date.getDay());
+      console.log("day: ", date.toLocaleString("en-Us", { weekday: "long" }));
+
+      //console.log(date);
+      //year,month,day,hours,minutes,seconds,miliseconds
+      const date1 = new Date(2022, 10, 23, 20, 22, 30, 0);
+      //console.log(date1);
+      //filter,find,reduce,forEach,spread,rest
+      //forEach - exactly same as filter
+      let numberArray = [1, 12, 3, 4, 5];
+      let foroutput = [];
+      numberArray.forEach((item) => {
+        //console.log(item);
+        if (item % 3 == 0) foroutput.push(item);
+      });
+      console.log(foroutput);
+      numberArray.filter((item) => item % 2 == 0);
+
+      // find - it will give first output it will get from array otherwise it is like filter method.
+      //let numberArray = [1, 12, 3, 4, 5];
+
+      let findData = numberArray.find((item) => item > 2);
+      console.log(findData);
+
+      //destructuring- try to acces the data at a time by writing object name in right hand side and let variables on left hand side
+      // destructuring- creating different variables in a one single line
+      // we can change property name by using alias on destructuring.
+
+      const element = {
+        x: 10,
+        y: 11,
+        z: 12,
+      };
+      const obj = {
+        today: { min: 40, max: 100 },
+        // x: "",
+        // y: "",
+        // a: "",
+      };
+      //let x = element.x
+      // let y = element.y
+      // let z = element.z
+
+      let { x, y, z } = element;
+      //let { x: newdata, y: newvalue, a } = obj;
+      let {
+        today: { max: maxtemp, min: min },
+      } = obj;
+      console.log(maxtemp, min);
+
+      //spread : ... if we passing precreated array otherwise like rest
+
+      //let numberArray = [1, 2, 3, 4, 5];
+      let days = ["M", "T", "W"];
+      // 0 numberArray 'days starts' days array
+      // numberArray.unshift(0);
+      // numberArray.push("days start");
+      // //numberArray.concat(days);
+      // console.log(numberArray.concat(days));
+      let finalArray = [0, ...numberArray, "Days starts", ...days];
+      //[0,1,2,3,4,5]
+      finalArray[3] = "Updated";
+
+      console.log(finalArray);
+
+      //rest : ...arrayname , we can use as a dirrect array name..
+      ///rest is an operator and convert hole array with ... then arrayname
+      function addNumbers(...args) {
+        // let addNumbers = (x,y,z)=>{}
+        // const args = [x, y, z, i, j];
+        //reduce
+        return args.reduce((a, b) => a + b);
+      }
+      console.log(addNumbers(1, 2, 3, 4, 5, 10, 20, 10));
+
+      //filter - array method, work like loop
+      //reduce - aggreggation number like sum,max,min single output
+      // accumulator -will add all data in a accumulator
+      //current - data which will store in accumulator
+      // let a = 10;
+      // for (let i = 0; i < numberArray.length; i++) {
+      //   a += numberArray.length;
+      // }
+      // console.log(a);
+
+      //1,2,3,4
+      let sumData = 10;
+      sumData += 1;
+      sumData += 2;
+
+      //let numberArray = [1, 2, 3, 4];
+
+      let reduceData = numberArray.reduce((acc, curr) => acc + curr, 10);
+      console.log(reduceData);
+
+      //filter - array method
+      const arrayNumbers = [4, 5.6, -9.8, 42, 8.24, -2];
+      const datavalues = arrayNumbers.filter((num) => num > 0);
+      //console.log(datavalues);
+
+      //merge to array/ concat to array
+      //constructor functions
+      let concatarray = function (arg1, arg2) {
+        return arg1.concat(arg2);
+      };
+      //let finalArray = concatarray([1, 2], [3, 4, 5, 6, 7]);
+      // console.log(finalArray);
+      //annonymous function: doesnot have specific name only function key word
+      //arrow functions : work without function key word
+
+      let welcome1 = function () {
+        //code
+        console.log("This is function 1");
+      };
+      welcome1();
+
+      let welcome2 = () => {
+        console.log("this is function 2");
+        return "this is function2";
+      };
+      welcome2();
+      let welcome3 = () => "this is function 3";
+      console.log(welcome3());
+
+      let welcome4 = (num) => "this is function 4" + num;
+      console.log(welcome4(10));
+
+      //object work with reference not with the value
+      //mathData = {}
+      // mathData - memory block-123
+      // other memory block - 123
+
+      function testData() {
+        const mathData = {
+          piValue: 3.14,
+        };
+        Object.freeze(mathData);
+        mathData.piValue = 100;
+        return mathData;
+      }
+
+      // let data = testData();
+      // console.log(data);
+
+      //Ternary operators = are equal if else
+      //if(condition){/} else{/}
+      //condition ? statement if true : statement if false
+      // function checkEqual(a, b) {
+      //   if (a === b) {
+      //     return true;
+      //   } else {
+      //     return false;
+      //   }
+      //   return a === b ? "numbers are equal" : "numbers not equal";
+      // }
+      // let output = checkEqual(10, 20);
+      // console.log(output);
+
+      // function checkSign(num) {
+      //   //if elseif else
+      //   return num > 0 ? "positive" : num < 0 ? "Negative" : "Zero";
+      // }
+      // let output = checkSign(0);
+      // console.log(output);
+
       //for loop
       //10 records , 5 other record
 
-      for (let index = 0; index < 10; index++) {
-        console.log("this isw index value:", index);
-        for (let k = 0; k < 5; k++) {
-          console.log("this is k::", k);
-        }
-      }
+      // for (let index = 0; index < 10; index++) {
+      //   console.log("this isw index value:", index);
+      //   for (let k = 0; k < 5; k++) {
+      //     console.log("this is k::", k);
+      //   }
+      // }
       //objects
-      let names = ["Faiza", "Tasmin", 20];
+      // let names = ["Faiza", "Tasmin", 20];
 
-      let person = {
-        firstName: "Faiza Tasmin",
-        age: 27,
-        color: "green",
-        1: "new data",
-        name: "abc",
-        trending: "This is trending",
-      };
-      person.address = "this is my address"; //add new property
-      person[3] = "hello everyone";
-      person.color = "red"; //update any property
-      delete person.name; // delete any property
+      // let person = {
+      //   firstName: "Faiza Tasmin",
+      //   age: 27,
+      //   color: "green",
+      //   1: "new data",
+      //   name: "abc",
+      //   trending: "This is trending",
+      // };
+      // person.address = "this is my address"; //add new property
+      // person[3] = "hello everyone";
+      // person.color = "red"; //update any property
+      // delete person.name; // delete any property
 
       // console.log(person);
       //hasOwnProperty()
-      let present = {
-        gifts: "abc",
-        papers: "pqr",
-        parcels: "xyz",
-      };
+      // let present = {
+      //   gifts: "abc",
+      //   papers: "pqr",
+      //   parcels: "xyz",
+      // };
 
-      function checkProperty(property) {
-        return present.hasOwnProperty(property);
-      }
+      // function checkProperty(property) {
+      //   return present.hasOwnProperty(property);
+      // }
       // console.log(checkProperty("stone"));
 
       //dot notation
@@ -98,20 +297,20 @@
         //not a valid number
         /*
 
-            &&
+                                    &&
 
-            true and true and true and true .... = executes/true
-
-
-            OR
-            ||
-              true or true or true = executed
-              true or false or false = executed
-              false or false or false = not executed
+                                    true and true and true and true .... = executes/true
 
 
+                                    OR
+                                    ||
+                                      true or true or true = executed
+                                      true or false or false = executed
+                                      false or false or false = not executed
 
-            */
+
+
+                                    */
 
         if (number > 100 && number < 150) {
           return "Greater 100";
@@ -263,9 +462,9 @@
       //console.log(sentence);
 
       /*
-                        n - new line
-                        t - tab
-                        */
+                                                n - new line
+                                                t - tab
+                                                */
 
       //2 math operations
 
