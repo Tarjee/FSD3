@@ -69,7 +69,7 @@ JS Assignment:
 
 1. create html file, script tag
 2. Create array of objects- 5objects
-Ex: let contcts = [
+Ex: let contacts = [
      {
 firstName : 'string'
     lastName : 'string'
@@ -103,3 +103,37 @@ findContact('firstName value from the object' ,'property of the object')
 
 //////////////////
 DOM - Document Object Model(represention of object)
+document
+
+const webpage = {
+    p:{
+        color: 'green'
+    }
+    h1:'',
+    color: 'red'
+}
+
+1. Access elements from html
+       -  getElementById()
+            - if present returns elements
+            - if no exists return null
+
+        - getElementsByClassName()
+            - if exists - return collection of elements - array of all the elements - 0
+       
+        - getElementsByTagName()
+            - if exists - return collection of elements - array of all the elements - 0
+
+     
+        - getElementsByName()   
+           - if exists - return collection of elements - array of all the elements - 0
+
+
+2. Create new elements
+        - createElement and appendChild or append
+
+3. Access 
+      - querySelector()  - .class , #id  , tag
+      - querySelectorAll() - .class , #id  , tag
+      4. Create new attribute
+        - createAttribute() and setAttributeNode()

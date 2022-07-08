@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let contacts = [
+        {
+          firstName: "Faiza Tasmin",
+          lastName: "Tarjee",
+          phoneNo: 433590685,
+          likes: ["Books", "Musics", "Movies", "Cooking"],
+        },
+        {
+          firstName: "Elly",
+          lastName: "Marcus",
+          phoneNo: 437625277,
+          likes: ["Travel", "Food"],
+        },
+        {
+          firstName: "Samuel",
+          lastName: "Gilbert",
+          phoneNo: 4643625277,
+          likes: ["Eating", "Musics", "Flying"],
+        },
+        {
+          firstName: "Harley",
+          lastName: "Queen",
+          phoneNo: 43722335,
+          likes: ["Playing", "Dancing", "Poetry", "Fighting"],
+        },
+        {
+          firstName: "Lucy",
+          lastName: "Backer",
+          phoneNo: 433332234,
+          likes: ["Dancing", "Walking beside beach", "Fishing"],
+        },
+      ];
+
+      //   console.log(contacts);
+
+      function findContact(name, prop) {
+        for (let i = 0; i < contacts.length; i++) {
+          if (contacts[i].firstName == name) {
+            if (contacts[i][prop]) {
+              return contacts[i][prop];
+            }
+            return "No property found.";
+          }
+        }
+
+        return "No such name found ";
+      }
+      console.log(findContact("Lucy", "likes"));
+    </script>
+  </body>
+</html>

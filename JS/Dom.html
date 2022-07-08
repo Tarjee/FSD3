@@ -2,14 +2,131 @@
 <html lang="en">
   <head>
     <title>Document</title>
+    <style>
+      h2 {
+        color: brown;
+      }
+      h1 {
+        /* color: green; */
+      }
+      .div1 {
+        border: 1px solid black;
+        padding: 8px;
+        margin: 1rem 0;
+      }
+      .para {
+        background-color: red;
+      }
+      #myDiv {
+        background-color: aqua;
+        padding: 10px;
+        margin: 1rem 0;
+      }
+    </style>
   </head>
   <body>
+    <!-- we use bracket notation when we do not know the property  -->
     <!-- document is built in variable -->
-    <h1>This is heading</h1>
+    <h1>This is first heading</h1>
+    <h1 id="h1">This is heading</h1>
     <h2>This is h2 heading</h2>
     <p id="demo"></p>
+    <div class="div1">Element 1</div>
+    <div class="div1 para div2">Element 2</div>
+    <p class="div1 para">This is paragraph</p>
+    <p>First name: <input type="text" value="Fatima" name="firstname" /></p>
+    <p>First name: <input type="text" value="Sarah" name="firstname" /></p>
+    <p id="namepara"></p>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Juice</li>
+    </ul>
+    <ol>
+      <li>Pens</li>
+      <li>Caps</li>
+    </ol>
+    <p id="lipara"></p>
+
+    <div id="myDiv">
+      <h3>This is DIV element</h3>
+    </div>
+
     <script>
-      console.log(document);
+      //by using create attribute we can create class/id/style...
+      //const atr = document.createAttribute('class');
+      //atr.valu = 'para';
+      const attribute = document.createAttribute("style");
+      attribute.value = "color: purple";
+
+      const h1 = document.getElementsByTagName("h1")[0];
+      h1.setAttributeNode(attribute);
+
+      //QuerySelector - it will get only one data at a time whatever it get first
+      document.querySelector("p").style.backgroundColor = "red";
+      document.querySelector(".div1").style.backgroundColor = "lightblue";
+      document.querySelector("#myDiv").style.backgroundColor = "pink";
+
+      const list = document.querySelectorAll("p");
+      for (let i = 0; i < list.length; i++) {
+        list[i].style.backgroundColor = " yellow";
+      }
+      // const list = document.querySelectorAll(".div1");
+      // for (let i = 0; i < list.length; i++) {
+      //   list[i].style.backgroundColor = "orange";
+      // }
+      // const list = document.querySelectorAll("#myDiv");
+      // for (let i = 0; i < list.length; i++) {
+      //   list[i].style.backgroundColor = " Gray";
+      // }
+
+      const divPara = document.createElement("p");
+      divPara.innerText = "This is created for div element";
+
+      document.getElementById("myDiv").appendChild(divPara);
+
+      //create
+      const para = document.createElement("p");
+      para.innerText = "This is JS paragraph";
+      //Append - take the data and added the data after creating data.
+      //Append - to modify or added to the html body and it will add end of the body tag.
+      //AppendChild - added one at a time
+      //innerText,innerHtml,Textcontent - helps us to add somethings.
+      document.body.appendChild(para);
+
+      let lielement = document.getElementsByTagName("li");
+      document.getElementById("lipara").innerHTML = lielement[2].innerHTML;
+      console.log(lielement[2].innerHTML);
+
+      let nameElements = document.getElementsByName("firstname");
+      console.log(nameElements[0].tagName);
+
+      //console.log(nameElements[0].tagName);
+      document.getElementById("namepara").innerHTML = nameElements[0].tagName; //value
+
+      const collection = document.getElementsByClassName("div1 para");
+
+      for (let i = 0; i < collection.length; i++) {
+        collection[i].innerHTML = "Data Updated";
+        collection[i].style.backgroundColor = " green";
+      }
+
+      console.log(collection);
+
+      //    html content + css
+      //html and css whatever we write it will stay forever we can't modify or interection.
+      //javascript
+      //form of document is a global constant that interect with html and css within javascript.
+      console.log(document.getElementById("demo"));
+      document.getElementById("demo").innerHTML = "Hello Html";
+      //This is how we can modify css within javascript
+      document.getElementById("h1").style.color = "gray";
+
+      //document have 3 format/syntax
+      //innerHtml
+      //innerText
+      //textContent
+      // console.log(document);
     </script>
   </body>
 </html>
