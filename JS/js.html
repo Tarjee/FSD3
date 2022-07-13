@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .divStyle {
+        background-color: orangered;
+        width: 100%;
+        padding: 25px;
+        color: white;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- append / prepend
+    appendChild - add 1 element.
+    -->
+    <ul id="app">
+      <li>Javascript</li>
+    </ul>
+    <p id="dataPara">
+      This is the para element which has <span>a span element</span>. final data
+    </p>
+    <a href="https://www.google.com" id="dataAnchor" target="_blank">Google</a>
+    <!-- <button id="firstBtn" onclick="clickHandler()">Alert button</button> -->
+    <button id="firstBtn">Alert button</button>
+    <button onclick="addNewClass()">Add class</button>
+    <div id="classdiv"></div>
+    <!-- remove -->
+    <button onclick="removeOldCSS()">remove class</button>
+    <div id="removeClass" class="divStyle">Class will be removed</div>
+    <button onclick="toggleCss()">Toggle Css</button>
+    <div id="toggleClass" class="divStyle">Class will toggle</div>
+
+    <script>
+      //toggle
+      function toggleCss() {
+        let element = document.getElementById("toggleClass");
+        element.classList.toggle("divStyle");
+      }
+
+      //Remove class
+      function removeOldCSS() {
+        let element = document.getElementById("removeClass");
+        element.classList.remove("divStyle");
+      }
+
+      //Add class
+      function addNewClass() {
+        let element = document.getElementById("classdiv");
+        element.classList.add("divStyle");
+        // element.innerHTML = "Updated div";
+      }
+
+      //event handling
+      //addEventListener - can add event like click,mouse hover...
+      const btn = document.getElementById("firstBtn");
+      btn.addEventListener("click", clickHandler);
+      function clickHandler() {
+        alert("Welcome to eventlistener");
+      }
+
+      //document.querySelector("#dataRemove").remove();
+      //removeattribute
+      //document.querySelector("#dataAnchor").removeAttribute("href");
+
+      //select ul tag
+      let app = document.querySelector("#app");
+      //array of data
+      let langs = ["Typescript", "HTML", "Angular"];
+
+      let data = langs.map((a) => {
+        let li = document.createElement("li");
+        li.textContent = a;
+        return li;
+      });
+      // app.append(...data);
+      app.prepend(...data);
+
+      //map - work like for loop
+      // langs.map();
+      //innerHTML,innerText,textContent
+
+      console.log("innerText");
+      console.log(document.querySelector("#dataPara").innerText);
+
+      console.log("innerHTML");
+      console.log(document.querySelector("#dataPara").innerHTML);
+
+      console.log("textContent");
+      console.log(document.querySelector("#dataPara").textContent);
+    </script>
+  </body>
+</html>

@@ -6,9 +6,9 @@
       h2 {
         color: brown;
       }
-      h1 {
-        /* color: green; */
-      }
+      /* h1 {
+        color: green; 
+      } */
       .div1 {
         border: 1px solid black;
         padding: 8px;
@@ -126,6 +126,106 @@
       //innerHtml
       //innerText
       //textContent
+
+      // accept 2 integers and find the largest one.
+      // let first_number = 10;
+      // let last_number = 15;
+      // function checkNumber(a, b) {
+      //   //solution 1
+      //   return a > b ? "a is largest" : a < b ? "b is largest" : "equal";
+      //   //solution2
+      //   if (a != b) {
+      //     return a > b ? "a is greater" : "b is greater";
+      //   } else {
+      //     return "equal";
+      //   }
+      //   //solution3
+      //   if (a > b) {
+      //     console.log(a + "is greater");
+      //   } else if (b > a) {
+      //     console.log(b + "is greater");
+      //   } else {
+      //     console.log("Both are equal");
+      //   }
+      // }
+      // checkNumber(first_number, last_number);
+
+      // write a function to check a string is blank or not
+
+      //solution1
+      // function checkString = (str)=> {
+      //   return str.length === 0? "blank string" : "Not blank";
+      // }
+      // console.log(checkString(""));
+      //solution2
+      // function checkBlank(abc) {
+      //   if (abc.length == 0) {
+      //     return "The string is blank";
+      //   } else {
+      //     return "not blank";
+      //   }
+      // }
+      // console.log(checkBlank(""));
+
+      // let a = 6;
+      // let string = "";
+      // for (let i = 0; i <= a; i++) {
+      //   for (let j = 0; j < i; j++) {
+      //     string += "*";
+      //   }
+      //   string += "\n";
+      // }
+      // console.log(string);
+
+      // find sum of 3 numbers and then positive/negative
+      // let a, b, c;
+
+      // function checkSum(num1, num2, num3) {
+      //   let sum = num1 + num2 + num3;
+      //   if (sum > 0) {
+      //     console.log("sum is positive");
+      //   } else {
+      //     console.log("sum is negative");
+      //   }
+      // }
+      // checkSum(-1, 0, 1);
+
+      //swap value of two variables
+
+      let a = 10;
+      let b = 20;
+
+      [a, b] = [b, a];
+
+      console.log("value of a is:", a);
+      console.log("value of b is :", b);
+
+      //print
+      /*
+
+       *
+       **
+       ***
+       ****
+       *****
+       ******
+
+       */
+      for (let i = 1; i <= 6; i++) {
+        for (let j = 0; j <= i; j++) {
+          chr = chr + "*";
+        }
+        console.log(chr);
+        chr = " ";
+      }
+      //swap
+      function swap(a, b) {
+        let c = a;
+        a = b;
+        b = c;
+        console.log(a, b);
+      }
+
       // console.log(document);
       //DOM
     </script>

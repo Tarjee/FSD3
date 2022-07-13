@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <style>
+      .olT {
+        background-color: green;
+        width: 100%;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div" class="header"></div>
+    <section id="container">
+      <ul id="newLi">
+        <li class="first">One</li>
+        <li class="second">Two</li>
+        <li class="third">Three</li>
+      </ul>
+      <ol class="olTag">
+        <li class="first">One</li>
+        <li class="second">Two</li>
+        <li id="ol_third" class="third">Three</li>
+      </ol>
+    </section>
+    <div class="footer"></div>
+    <div id="classRemove" class="footer">It will be removed</div>
+    <button onclick="classRemove()">remove</button>
+    <button onclick="addMain()">Add class</button>
+    <button onclick="removeMain()">remove main</button>
+    <button onclick="textHello()">Submit</button>
+    <button onclick="addNewClass()">CSS</button>
+    <button onclick="toggle()">Toggle</button>
+    <script>
+      function toggle() {
+        let toggle = document.querySelector("#div");
+        toggle.classList.toggle("header");
+      }
+      function removeMain() {
+        let main = document.querySelector(".footer");
+        main.classList.remove("main");
+      }
+      function addMain() {
+        let main = document.querySelector(".footer");
+        main.classList.add("main");
+        //main.classList.remove("main");
+      }
+
+      function classRemove() {
+        let element = document.getElementById("classRemove");
+        element.classList.remove("footer");
+      }
+      function addNewClass() {
+        const css = document.querySelector(".olTag");
+        css.classList.add("olT");
+      }
+      const li = document.querySelectorAll("#second");
+      let ol = document.querySelector("#ol_third");
+
+      function textHello() {
+        const section = document.querySelector("#container");
+        section.textContent = "Hello";
+      }
+      const newList = document.querySelector("#newLi");
+      let newli = ["Four", "Five", "Six"];
+      let data = newli.map((add) => {
+        let li = document.createElement("li");
+        li.textContent = add;
+        return li;
+      });
+      newList.append(...data);
+    </script>
+  </body>
+</html>
+
+<!-- 
+    1.Select the section with an id container using all the know methods
+    2. select all the list of items which has class second
+    3.select the list item which has class of third, but only the list item inside ol
+ 4.give section with id of conationer text 'Hello!'
+
+    5.Create new li element, append the li to ul
+    
+    6.Get all the li items from ol tag and add background 
+    color green to all the li items
+
+    7.Remove the div with the class footer
+
+    8.Add the class main to div with class footer
+
+    9.Remove the class main on the div with class footer
+
+    10.Toggle class header
+
+-->

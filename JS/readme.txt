@@ -137,3 +137,8 @@ const webpage = {
       - querySelectorAll() - .class , #id  , tag
       4. Create new attribute
         - createAttribute() and setAttributeNode()
+
+4.create new attribute
+       - createAttribute and setAttributeNode()
+
+5. append
