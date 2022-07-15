@@ -9,7 +9,9 @@
         padding: 25px;
         color: white;
         box-sizing: border-box;
+        margin: 2rem;
       }
+      /* study css transform property */
     </style>
   </head>
   <body>
@@ -32,8 +34,68 @@
     <div id="removeClass" class="divStyle">Class will be removed</div>
     <button onclick="toggleCss()">Toggle Css</button>
     <div id="toggleClass" class="divStyle">Class will toggle</div>
+    <!-- Keyboard -->
+    <input type="text" id="keyEvent" />
 
+    <div id="mouseDiv">Mouse</div>
+    <p id="p1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit pariatur
+      soluta et nam esse dolorum.
+    </p>
+    <input type="text" id="selectText" />
+    <section id="selectBox">
+      <option value="first">Select</option>
+      <option value="color">blur</option>
+      <option value="data">value</option>
+    </section>
     <script>
+      //form
+      //focus
+
+      let text = document.querySelector("#selectText");
+
+      text.addEventListener("focus", () => {
+        text.style.background = "yellow";
+      });
+      text.addEventListener("blur", () => {
+        text.style.background = "blue";
+        console.log(event.target.value);
+      });
+      text.addEventListener("change", (event) => {
+        console.log(event.target.value);
+      });
+      //mouse event
+      let divData = document.querySelector("#mouseDiv");
+      divData.addEventListener("mousedown", () => {
+        document.getElementById("p1").style.color = "hotpink";
+      });
+
+      // divData.addEventListener("mouseup", () => {
+      //   document.getElementById("p1").style.color = "#444";
+      // });
+      //keyup - only realese the button then event will print in the console.
+
+      //keyboard events
+      //object called event
+
+      let keyboard = document.querySelector("#keyEvent");
+
+      //keypress- dont get access of arrow key or up key
+      // works just like keydown but not for arrow and functions.
+      // keyboard.addEventListener("keypress", (event) => {
+      //   console.log(event);
+      // });
+
+      // keyboard.addEventListener("keyup", (event) => {
+      //   console.log(event);
+      // });
+
+      //keydown
+
+      keyboard.addEventListener("keydown", (event) => {
+        console.log(event);
+      }); //as long as you keep typing
+
       //toggle
       function toggleCss() {
         let element = document.getElementById("toggleClass");
@@ -93,3 +155,8 @@
     </script>
   </body>
 </html>
+<!--  Assignment02:
+1.. Create a ul element and append it to body
+2.Create 2 li elements , add text to li elements and then append it to ul tag
+3.click event on ul , chage the color of li element that was clicked
+-- !>

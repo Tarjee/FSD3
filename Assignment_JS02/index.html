@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .ulCSS {
+        background-color: grey;
+        color: beige;
+        padding: 1rem;
+        margin: 2rem 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button id="cssBtn">Submit</button> -->
+    <script>
+      const ul = document.createElement("ul");
+      //ul.innerHTML = `<li> Hello </li> `;
+
+      function appendUl() {
+        document.body.append(ul);
+      }
+      appendUl();
+
+      const liArray = ["Frontend", "Backand"];
+      let value = liArray.map((adding) => {
+        let list = document.createElement("li");
+        list.textContent = adding;
+        return list;
+      });
+      ul.append(...value);
+
+      const btn = document.querySelector("ul");
+      btn.addEventListener("click", addEvent);
+
+      function addEvent() {
+        btn.classList.add("ulCSS");
+      }
+    </script>
+  </body>
+</html>
