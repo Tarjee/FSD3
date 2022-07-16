@@ -4,7 +4,7 @@
     <title>Document</title>
     <style>
       .ulCSS {
-        background-color: grey;
+        background-color: rgb(155, 140, 145);
         color: beige;
         padding: 1rem;
         margin: 2rem 0;
@@ -13,7 +13,7 @@
     </style>
   </head>
   <body>
-    <!-- <button id="cssBtn">Submit</button> -->
+    <!-- <button id="cssBtn">Submit</button>-->
     <script>
       const ul = document.createElement("ul");
       //ul.innerHTML = `<li> Hello </li> `;
@@ -32,9 +32,9 @@
       ul.append(...value);
 
       const btn = document.querySelector("ul");
-      btn.addEventListener("click", addEvent);
+      btn.addEventListener("click", addCss);
 
-      function addEvent() {
+      function addCss() {
         btn.classList.add("ulCSS");
       }
     </script>

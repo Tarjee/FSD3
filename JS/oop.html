@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- this keyword
+    this - related to window,can be lost very easly in func
+    this - bounded to only in object property
+    -->
+    <script>
+      const video = {
+        title: "title",
+        play() {
+          console.log(this);
+        },
+      };
+      //video.play();
+      //console.log(video);
+      video.stop = function () {
+        console.log(this);
+      };
+      // video.stop();
+
+      function playVideo() {
+        console.log(this);
+      }
+      //playVideo();
+
+      //constructor functions- create object as many as we want/
+      //we can create multiple object by using constructor functions
+      //PascalCase - function name
+      //by witing new its automatically call constructor function
+
+      function Video(title) {
+        this.title = title;
+        //console.log(this);
+      }
+      let video1 = new Video("abc");
+      console.log(video1);
+      let video2 = new Video("new title");
+      console.log(video2);
+      //object
+      const color = {
+        pink: "lotus",
+        red: "rose",
+        green: "grass",
+      };
+      console.log(color);
+
+      //object.keys
+      let keys = Object.keys(color);
+      console.log(keys);
+
+      //object.values
+      let values = Object.values(color);
+      console.log(values);
+
+      //object.entries
+
+      let entry = Object.entries(color);
+      console.log(entry);
+    </script>
+  </body>
+</html>

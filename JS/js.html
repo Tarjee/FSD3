@@ -43,18 +43,36 @@
       soluta et nam esse dolorum.
     </p>
     <input type="text" id="selectText" />
-    <section id="selectBox">
+    <select id="selectBox">
       <option value="first">Select</option>
       <option value="color">blur</option>
       <option value="data">value</option>
-    </section>
+    </select>
+   
     <script>
+//setTimeout
+
+function message(){
+  console.log("just a message");
+}
+
+ setTimeout(message,1000);
+
+//setInterval
+
+let count = 0;
+function counter(){
+  //console.log(count++);
+}
+setInterval(counter, 3000);
+
+
       //form
       //focus
 
-      let text = document.querySelector("#selectText");
-
-      text.addEventListener("focus", () => {
+      let text = document.querySelector("#selectText")
+        
+      text.addEventListener("focus",() => {
         text.style.background = "yellow";
       });
       text.addEventListener("blur", () => {
