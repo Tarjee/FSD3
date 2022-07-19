@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const employees = [
+        {
+          id: 1,
+          name: "Fahim",
+          age: 24,
+          designation: "Frontend Developer",
+          salary: 65000,
+          phone: +6145634582,
+        },
+        {
+          id: 2,
+          name: "Rayhan",
+          age: 27,
+          designation: "Senior Frontend Developer",
+          salary: 110000,
+          phone: +614476893,
+        },
+        {
+          id: 3,
+          name: "Piash",
+          age: 20,
+          designation: "Accountants",
+          salary: 55000,
+          phone: +6126374572,
+        },
+        {
+          id: 4,
+          name: "Roni",
+          age: 30,
+          designation: "Senior Full stack Developer",
+          salary: 1300000,
+          phone: +614572891,
+        },
+        {
+          id: 5,
+          name: "Mahrin",
+          age: 27,
+          designation: "Software Engineer",
+          salary: 70000,
+          phone: +6147562813,
+        },
+      ];
+      let developers = employees.filter((employee) =>
+        employee.designation.includes("Developer")
+      );
+      console.log(developers);
+      let data = employees.filter((employee) => employee.age < 30);
+      console.log(data);
+      let ageSalary = employees.filter(
+        (employee) => employee.age < 30 && employee.salary > 70000
+      );
+      console.log(ageSalary);
+
+      let accountants = employees.filter((employee) =>
+        employee.designation.includes("Accountants")
+      );
+      console.log(accountants);
+
+      let filteredEmployees = employees.filter((employee) => {
+        if (
+          employee.designation.includes("Accountants") &&
+          employee.salary < 40000
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+
+      if (filteredEmployees.length === 0) {
+        console.log("Not found.");
+      } else {
+        console.log(filteredEmployees);
+      }
+      let employeeId = employees.filter((employee) => employee.id === 5);
+      console.log(employeeId);
+    </script>
+  </body>
+</html>

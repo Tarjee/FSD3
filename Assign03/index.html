@@ -20,10 +20,24 @@
   </head>
   <body>
     <div class="image-container">
-      <img class="img-train" src="../Assign03/images/train1.png" alt="train" />
+      <img
+        style="width: 30%; height: 20%"
+        class="img-train"
+        src="https://scontent-syd2-1.xx.fbcdn.net/v/t39.30808-6/280234987_3213904122202140_1520343448274723344_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=R0QxPotcx2YAX8njsV4&tn=2HTTf_bO0CKWZBXE&_nc_ht=scontent-syd2-1.xx&oh=00_AT8A3ui3oGjCE-M1OVVofEpEPZhsFqCw1RTFQ1RCuOQjFQ&oe=62D8E6A8"
+        alt="train"
+      />
     </div>
     <div class="para">
       <p>Image is going to move.</p>
+      <iframe
+        width="30%"
+        height="20%"
+        src="https://www.youtube.com/embed/Vqsy6q1QW8c"
+        title="Two Face (Dark Version)"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
     <button id="btn">Click</button>
 
@@ -32,10 +46,10 @@
 
       const btn = document.querySelector("#btn");
       btn.addEventListener("click", clickHandler);
-      let num = 0;
+      let num = 90;
 
       function clickHandler() {
-        num += 25;
+        num += 29;
         img.style.marginLeft = `${num}px`;
       }
       //Changing for pull request
